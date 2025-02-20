@@ -130,8 +130,13 @@ public class Scania implements Movable, TruckBed, Vehicle {
     }
 
     public void move() {
-        if (!this.truckBedExtended) {
-            parent.move();
-        } else throw new IllegalArgumentException("Du kan inte röra dig när flaket är uppe");
+        try {
+            if (!this.truckBedExtended) {
+                parent.move();
+            } else throw new IllegalArgumentException("Du kan inte röra dig när flaket är uppe");
+        }
+        catch (IllegalArgumentException e) {
+            return;
+        }
     }
 }

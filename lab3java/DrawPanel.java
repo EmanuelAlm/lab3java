@@ -22,9 +22,6 @@ public class DrawPanel extends JPanel{
     BufferedImage volvoWorkshopImage;
     Point volvoWorkshopPoint = new Point(300,300);
 
-    private final Map<VehicleFunctionality, Point> carPos = new HashMap<>();
-
-
 
 
     // TODO: Make this general for all cars
